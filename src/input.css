@@ -1,3 +1,17 @@
+
+  
+  #color-button.selected {
+    background-color:orange;
+
+  }
+  
+  #color-button.unselected {
+    background-color: gray;
+    
+  }
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
