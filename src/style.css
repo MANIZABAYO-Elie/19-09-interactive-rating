@@ -2,8 +2,8 @@
   background-color:orange;
 }
 
-#color-button.unselected {
-  background-color: gray;
+#color-button.unselected{
+  background-color:green;
 }
 
 *, ::before, ::after {
