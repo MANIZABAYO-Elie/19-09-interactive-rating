@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../src/style.css" />
     <title>interactive rating</title>
   </head>
-  <body class="grid place-items-center">
+  <body class="grid place-items-center hover:" >
     <div
       class="bg-[hsl(213,19%,18%)] w-1/4 h-96 rounded-2xl p-8 place-items-center"
       id="mainContainer"
@@ -72,33 +72,33 @@
       </p>
     </div>
    <script>
-    // function changeColor(selectedButton){
-    //     const buttons =document.querySelectorAll('#color-button');
+    function changeColor(selectedButton){
+        const buttons =document.querySelectorAll('#color-button');
     
-    //     buttons.forEach(
-    //     button => {
-    //  if (button === selectedButton) {
-    //   // Change the color of the selected button
-    //   button.add('selected');
-    //   button.add('unselected');
-    // } else {
-    //   // Change the color of the other buttons
-    //   button.classList.add('unselected');
-    //   button.classList.remove('selected');
-    // }
+        buttons.forEach(
+        button => {
+     if (button === selectedButton) {
+      // Change the color of the selected button
+      button.add('selected');
+      button.add('unselected');
+    } else {
+      // Change the color of the other buttons
+      button.classList.add('unselected');
+      button.classList.remove('selected');
+    }
 
-    //         }
-    //     )}
-     const mainContainer = documet.getElementById('mainContainer')
-     const submitBtn = document.getElementById('submitButton');
-     const thankMessage = document.getElementById('thankMessage');
-     submitBtn.addEventListener("onclick",()=>{
-        thankMessage.classList.add("flex");
-        mainContainer.style.display("hidden");
+        }
+    )}
+    //  const mainContainer = documet.getElementById('mainContainer')
+    //  const submitBtn = document.getElementById('submitButton');
+    //  const thankMessage = document.getElementById('thankMessage');
+    //  submitBtn.addEventListener("onclick",()=>{
+    //  thankMessage.classList.add("flex");
+    //  mainContainer.style.display("hidden");
 
-     }
+    //  }
 
-     )
+    //  )
 
    </script>
   </body>
