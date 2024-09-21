@@ -1,11 +1,11 @@
 
   
- #color-button.selected {
+ #color-button.checked {
     background-color:orange;
 
   }
-#color-button.unselected{
-    background-color:orange;
+#color-button.unchecked{
+    background-color:gray;
     
   }
 

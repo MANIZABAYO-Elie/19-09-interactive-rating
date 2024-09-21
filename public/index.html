@@ -18,7 +18,7 @@
         All feedback is appreciated to help us<br />
         improve our offering!
       </p>
-      <div class="flex justify-evenly pt-10 pb-6">
+      <div class="flex justify-evenly pt-10 pb-6" id="rating_button">
         <button
           class="bg-[hsl(217,12%,63%)] text-white font-bold rounded-full h-12 w-12 flex items-center justify-center"
           id="color-button" onclick="changeColor()"
@@ -72,23 +72,58 @@
       </p>
     </div>
    <script>
-    function changeColor(selectedButton){
-        const buttons =document.querySelectorAll('#color-button');
-    
-        buttons.forEach(
-        button => {
-     if (button === selectedButton) {
-      // Change the color of the selected button
-      button.add('selected');
-      button.add('unselected');
-    } else {
-      // Change the color of the other buttons
-      button.classList.add('unselected');
-      button.classList.remove('selected');
-    }
+   const buttons = document.querySelectorAll('#color-button');
+   const submitBtn   = document.querySelector('#submitBtn');
+   const rating_point = document.getElementById('rating');
+   const thankMessage = document.querySelector('#thankMessage');
 
-        }
-    )}
+    let rating = null;
+   buttons.forEach(button=> {
+    button.addEventListener('click',(e)=>{
+    
+      const active = document.querySelector('.checked')
+      if(active){
+        active.classList.remove('checked');
+      }
+      const card =e.target;
+      card.classList.add('checked');
+      rate =e.taget.innerText;
+    }
+  )
+   });
+   submitBtn.addEventListener('click',()=>{
+    if(rating){
+      rating_point.innerText = rating;
+      thankMessage.classList.add('hidden');
+      thankMessage.classList.remove('hidden');
+    }
+   }
+
+   )
+
+
+      
+   
+    
+    // function changeColor(selectedButton){
+    //     const buttons =document.querySelectorAll('#color-button');
+        
+    
+    //     buttons.forEach(
+    //     button => {
+    //  if (button===selectedButton) {
+    //   // Change the color of the selected button
+    //   button.add('selected');
+    //   button.add('unselected');
+    // } else {
+    //   // Change the color of the other buttons
+    //   button.classList.add('unselected');
+    //   button.classList.remove('selected');
+    // }
+
+    //     }
+    // )}
+
     //  const mainContainer = documet.getElementById('mainContainer')
     //  const submitBtn = document.getElementById('submitButton');
     //  const thankMessage = document.getElementById('thankMessage');
